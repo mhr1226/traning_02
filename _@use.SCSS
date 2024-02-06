@@ -1,0 +1,48 @@
+// 以下変数とミックスインの定義
+
+$colors:(#ffd9df,#87ceeb);
+// 背景色で使用
+$margin-set:20px auto;
+// marginの上下余白20pxの設定
+$container-width:800px;
+// 一番大きい値のwidthにのみ適用（使用回数多いため）
+@mixin box-size($width:null,$height:null,$background-color:null){
+@if $width != null{
+    width:$width;
+    }
+height: $height;
+@if $height != null{
+    height: $height;
+    }
+@if $background-color != null{
+    background-color:$background-color;
+    }
+}
+// 
+// widthとheight,background-colorの記述を統一したかった為使用
+
+// if文は使わない要素を省略できるようにする為に記述しました。
+// 今回は使用頻度として少ないですが、練習も兼ねて入れてます。
+
+@mixin space($margin:null,$padding:null){
+@if $margin != null{
+    margin:$margin;
+  }
+  @if $padding != null{
+      padding:$padding;
+  }
+}
+// marginとpaddingの指定を統一したかった為
+// 今回はpaddingは使いませんでしたが、記述の練習と動作チェックをしたかった為入れてます。
+
+@mixin position-set($position,$top:0,$left:0){
+  position: $position;
+  top: $top;
+  left: $left;
+}
+// 重複した記述を避けるために使用
+// positionを除き、省略した際に初期値が0になるよう指定してます。
+
+h2{
+  background-color: white;
+}

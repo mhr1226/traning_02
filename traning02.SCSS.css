@@ -3,10 +3,18 @@ h2 {
 }
 
 #top {
-  background-color: black;
   width: container-width;
   height: auto;
+  background-color: #87ceeb;
+  margin: margin-set;
+  padding: 0;
+  text-align: center;
+}
+#top .topchild {
+  width: 20%;
   height: auto;
-  background-color: black;
+  background-color: #ffd9df;
+  display: inline-block;
+  color: #87ceeb;
 }
 /*# sourceMappingURL=traning02.SCSS.css.map */

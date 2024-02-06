@@ -1,8 +1,19 @@
-@use '@use' as var;
+@use '変数流用' as f ;
 
 #top{
-  background-color: black;
 
-  @include var.box-size(container-width,auto,black);
+  @include f.box-size(container-width,auto,nth(f.$colors,2));
+
+  @include f.space(margin-set,0);
+  text-align: center;
+  
+  .topchild{
+    @include f.box-size(20%,auto,nth(f.$colors,1));
+    display: inline-block;
+
+    color: nth(f.$colors,2);
+    // nthだけだと、n番目という定義しかされていないから、そのあとの（）にasキーワード.変数名,n番目
+    // という順に記述する
+  }
 }
 

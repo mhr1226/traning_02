@@ -6,17 +6,12 @@ $margin-set:20px auto;
 // marginの上下余白20pxの設定
 $container-width:800px;
 // 一番大きい値のwidthにのみ適用（使用回数多いため）
-@mixin box-size($width:null,$height:null,$background-color:null){
-@if $width != null{
+@mixin box-size($width,$height,$background-color){
+
     width:$width;
-    }
-height: $height;
-@if $height != null{
     height: $height;
-    }
-@if $background-color != null{
+
     background-color:$background-color;
-    }
 }
 // 
 // widthとheight,background-colorの記述を統一したかった為使用

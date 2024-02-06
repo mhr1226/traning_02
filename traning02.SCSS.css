@@ -4,7 +4,6 @@ h2 {
 
 #top {
   background-color: black;
-  width: var(--container-width);
   width: container-width;
   height: auto;
   height: auto;

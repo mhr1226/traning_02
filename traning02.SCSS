@@ -2,7 +2,6 @@
 
 #top{
   background-color: black;
-  width: var(--container-width);
 
   @include var.box-size(container-width,auto,black);
 }

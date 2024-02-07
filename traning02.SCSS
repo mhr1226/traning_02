@@ -6,14 +6,44 @@
 
   @include f.space(margin-set,0);
   text-align: center;
+}
   
   .topchild{
     @include f.box-size(20%,auto,nth(f.$colors,1));
     display: inline-block;
-
     color: nth(f.$colors,2);
     // nthだけだと、n番目という定義しかされていないから、そのあとの（）にasキーワード.変数名,n番目
     // という順に記述する
+
+    &::before{
+      content:"★";
+      color: nth(f.$colors, 3);
+
+    }
+  }
+
+#middle-child01{
+  
+    &::before{
+      content:"★";
+      color: nth(f.$colors, 3);}
+    } 
+#middle-child02{
+  &::after{
+    content:"text";
+    color:nth(f.$colors, 4);
   }
 }
 
+#middle-child03{
+  @extend .topchild;
+
+  &::first-line{
+    font-size: 24px;
+    color:nth(f.$colors,2);
+  }
+}
+
+a:visited{
+  color:red;
+}

@@ -1,2 +1,2 @@
-h2{background-color:#fff}#top{width:container-width;height:auto;background-color:skyblue;margin:margin-set;padding:0;text-align:center}#top .topchild{width:20%;height:auto;background-color:#ffd9df;display:inline-block;color:skyblue}
+h2{background-color:#fff}#top{width:container-width;height:auto;background-color:skyblue;margin:margin-set;padding:0;text-align:center}.topchild,#middle-child03{width:20%;height:auto;background-color:#ffd9df;display:inline-block;color:skyblue}.topchild::before,#middle-child03::before{content:"★";color:#ff0}#middle-child01::before{content:"★";color:#ff0}#middle-child02::after{content:"text";color:red}#middle-child03::first-line{font-size:24px;color:skyblue}a:visited{color:red}
 /*# sourceMappingURL=traning02.SCSS.min.css.map */

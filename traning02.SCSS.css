@@ -1,3 +1,4 @@
+@charset "UTF-8";
 h2 {
   background-color: white;
 }
@@ -10,11 +11,35 @@ h2 {
   padding: 0;
   text-align: center;
 }
-#top .topchild {
+
+.topchild, #middle-child03 {
   width: 20%;
   height: auto;
   background-color: #ffd9df;
   display: inline-block;
   color: #87ceeb;
+}
+.topchild::before, #middle-child03::before {
+  content: "★";
+  color: yellow;
+}
+
+#middle-child01::before {
+  content: "★";
+  color: yellow;
+}
+
+#middle-child02::after {
+  content: "text";
+  color: red;
+}
+
+#middle-child03::first-line {
+  font-size: 24px;
+  color: #87ceeb;
+}
+
+a:visited {
+  color: red;
 }
 /*# sourceMappingURL=traning02.SCSS.css.map */

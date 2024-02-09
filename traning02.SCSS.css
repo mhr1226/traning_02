@@ -21,12 +21,12 @@ h2 {
 }
 .topchild::before, #middle-child03::before {
   content: "★";
-  color: yellow;
+  color: #87ceeb;
 }
 
 #middle-child01::before {
   content: "★";
-  color: yellow;
+  color: #87ceeb;
 }
 
 #middle-child02::after {

@@ -1,5 +1,13 @@
 @use '変数流用' as f ;
 
+@mixin first-content($content,$color:blue){
+  &::before{
+
+    content:$content;
+    color:$color;
+  }
+}
+
 #top{
 
   @include f.box-size(container-width,auto,nth(f.$colors,2));
@@ -15,18 +23,13 @@
     // nthだけだと、n番目という定義しかされていないから、そのあとの（）にasキーワード.変数名,n番目
     // という順に記述する
 
-    &::before{
-      content:"★";
-      color: nth(f.$colors, 3);
-
-    }
+    @include 
+    first-content("★",nth(f.$colors,2) );
   }
 
 #middle-child01{
   
-    &::before{
-      content:"★";
-      color: nth(f.$colors, 3);}
+  @include first-content("★",nth(f.$colors,2) );
     } 
 #middle-child02{
   &::after{

@@ -1,12 +1,44 @@
+@charset "UTF-8";
 h2 {
   background-color: white;
 }
 
 #top {
-  background-color: black;
-  width: var(--container-width);
   width: container-width;
   height: auto;
+  background-color: #87ceeb;
+  margin: margin-set;
+  padding: 0;
+  text-align: center;
+}
+
+.topchild, #middle-child03 {
+  width: 20%;
   height: auto;
-  background-color: black;
+  background-color: #ffd9df;
+  display: inline-block;
+  color: #87ceeb;
+}
+.topchild::before, #middle-child03::before {
+  content: "★";
+  color: #87ceeb;
+}
+
+#middle-child01::before {
+  content: "★";
+  color: #87ceeb;
+}
+
+#middle-child02::after {
+  content: "text";
+  color: red;
+}
+
+#middle-child03::first-line {
+  font-size: 24px;
+  color: #87ceeb;
+}
+
+a:visited {
+  color: red;
 }/*# sourceMappingURL=traning02.css.map */
